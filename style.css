@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #c52857;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease; /* 색상 변경을 부드럽게 */
+}
+
+/* 🎯 마우스를 올렸을 때 효과 */
+nav ul li a:hover {
+    color: #ff8aa5; /* 연한 핑크색으로 변경 */
+}
+
+/* 🎯 밑줄 효과 추가 */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #ff8aa5;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+section {
+    padding: 40px 20px;
+}
+
+.project {
+    background: white;
+    margin: 10px auto;
+    padding: 15px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* 🎯 마우스를 올렸을 때 효과 */
+.project:hover {
+    transform: scale(1.05); /* 살짝 확대 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 강조 */
+    background-color: #f8f8f8; /* 배경색 살짝 변경 */
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+img {
+    border-radius: 10px; /* 모서리 둥글게 */
+}
