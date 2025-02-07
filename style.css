@@ -47,7 +47,7 @@ section {
 }
 
 .project {
-    background: white;
+    background-color: #f9f9f9; /* 기본 배경색 */
     margin: 10px auto;
     padding: 15px;
     width: 80%;
@@ -55,13 +55,23 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-size: cover; /* 배경 이미지 크기 설정 */
+    background-position: center; /* 배경 이미지 위치 설정 */
+    color: white; /* 텍스트 색상 */
 }
 
-/* 🎯 마우스를 올렸을 때 효과 */
+.project:nth-child(1) {
+    background-image: url('landing old school GIF by Álvaro Abrante.gif'); /* 첫 번째 프로젝트 배경 이미지 */
+}
+
+.project:nth-child(2) {
+    background-image: url('https://example.com/your-image2.jpg'); /* 두 번째 프로젝트 배경 이미지 */
+}
+
 .project:hover {
     transform: scale(1.05); /* 살짝 확대 */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 그림자 강조 */
-    background-color: #f8f8f8; /* 배경색 살짝 변경 */
+    background-color: rgba(255, 255, 255, 0.8); /* 배경색 투명도 조정 */
 }
 
 
@@ -76,4 +86,14 @@ footer {
 
 img {
     border-radius: 10px; /* 모서리 둥글게 */
+}
+
+a {
+    color: inherit; /* 부모 요소의 색상으로 링크 색상을 설정 */
+    text-decoration: none; /* 링크에 밑줄 없애기 */
+}
+
+a:hover {
+    color: inherit; /* 마우스를 올렸을 때 색상이 변하지 않도록 */
+    text-decoration: none; /* hover 시 밑줄 없애기 */
 }
