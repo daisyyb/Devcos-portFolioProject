@@ -31,5 +31,14 @@ darkModeStyle.innerHTML = `
         margin: 0;
         padding: 0;
     }
+    
+    /* 다크 모드에서 about 글자 색상 변경 */
+    .dark-mode #about h2,
+    .dark-mode #about p {
+        color: white;
+    }
+    .dark-mode #about strong {
+        color: #FFD1DC; /* 강조된 부분도 흰색과 어울리게 색상 조정 */
+    }
 `;
 document.head.appendChild(darkModeStyle);
